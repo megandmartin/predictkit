@@ -1,0 +1,83 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Founder brief",
+  "type": "object",
+  "required": [
+    "project_name",
+    "user",
+    "problem",
+    "industry",
+    "alternative",
+    "why_prediction",
+    "why_solana",
+    "difference",
+    "market_question",
+    "resolution_rule",
+    "void_policy",
+    "template"
+  ],
+  "properties": {
+    "project_name": {
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 2500
+    },
+    "user": {
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 2500
+    },
+    "problem": {
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 2500
+    },
+    "industry": {
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 2500
+    },
+    "alternative": {
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 2500
+    },
+    "why_prediction": {
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 2500
+    },
+    "why_solana": {
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 2500
+    },
+    "difference": {
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 2500
+    },
+    "market_question": {
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 2500
+    },
+    "resolution_rule": {
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 2500
+    },
+    "void_policy": {
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 2500
+    },
+    "template": {
+      "enum": [
+        "forecast-studio",
+        "market-explorer",
+        "resolution-desk"
+      ]
+    }
+  }
+}

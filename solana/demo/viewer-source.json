@@ -1,0 +1,7 @@
+{
+  "source": "evidence/solana-execution-2026-09-28/local-demo.json",
+  "source_sha256": "aceee174d8a8921a8140ad38616df6d8740224309c7cca76ee5838134b28d917",
+  "program_sha256": "218c05107cce14107db43f232ba92cf9142084bbbd23be606d5aeffd2421efec",
+  "output": "solana/demo/index.html",
+  "boundary": "Static presentation of a recorded local SVM execution; no new execution."
+}

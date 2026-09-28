@@ -1,0 +1,61 @@
+{
+  "research": {
+    "name": "Evidence lead",
+    "phase": "discovery",
+    "paths": [
+      "research/market.md"
+    ]
+  },
+  "product": {
+    "name": "Product lead",
+    "phase": "discovery",
+    "paths": [
+      "product/spec.md"
+    ]
+  },
+  "architect": {
+    "name": "Solana architect",
+    "phase": "discovery",
+    "paths": [
+      "architecture/plan.md"
+    ]
+  },
+  "chief": {
+    "name": "Chief of staff",
+    "phase": "decision",
+    "paths": [
+      "decisions/build-memo.md"
+    ]
+  },
+  "frontend": {
+    "name": "App engineer",
+    "phase": "build",
+    "paths": [
+      "app/index.html"
+    ]
+  },
+  "domain": {
+    "name": "Market designer",
+    "phase": "build",
+    "paths": [
+      "app/market.json",
+      "domain/resolution.md"
+    ]
+  },
+  "submission": {
+    "name": "Submission lead",
+    "phase": "build",
+    "paths": [
+      "submission/pitch.md",
+      "submission/demo.md",
+      "submission/application.md"
+    ]
+  },
+  "reviewer": {
+    "name": "Independent reviewer",
+    "phase": "review",
+    "paths": [
+      "qa/review.md"
+    ]
+  }
+}

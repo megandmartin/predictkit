@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en" data-theme="solana-signal">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="dark light">
+  <meta name="description" content="PredictKit is a local, open-source prediction-app builder. Shape a brief, approve the direction, and inspect the app, source files and evidence your team creates.">
+  <title>PredictKit · Build the app. Forecast what’s next.</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M14 3 3 16l13 13 13-13-8-8M12 16l4 4 12-13' fill='none' stroke='%2362E8CE' stroke-width='3'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="/fonts.css">
+  <link rel="stylesheet" href="/landing.css">
+  <script src="/landing.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header page-width">
+    <a class="wordmark" href="/" aria-label="PredictKit home">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M14 3 3 16l13 13 13-13-8-8M12 16l4 4 12-13"/></svg>
+      <span>predictkit<span class="brand-slash">/</span></span>
+    </a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="#how-it-works">How it works</a>
+      <a href="/skills">Agents & skills</a>
+      <a href="/readiness">Evidence desk</a>
+    </nav>
+    <div class="header-actions">
+      <div class="theme-control">
+        <label class="sr-only" for="theme">Appearance</label>
+        <select id="theme">
+          <option value="solana-signal">Solana Signal</option>
+          <option value="trust-layer">Trust Layer</option>
+          <option value="studio-classic">Studio Classic</option>
+        </select>
+      </div>
+      <a class="button compact header-cta" href="/studio">Open Studio <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></a>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="hero page-width" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <h1 id="hero-title">Turn a <span>question</span><br>into a<br>working app.</h1>
+        <p class="hero-intro">The open-source prediction-app builder. Give your agent team a clear brief. Review the direction. Leave with an app you can inspect and make your own.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="/studio">Open Studio <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></a>
+          <a class="text-link" href="/skills">Meet the agents <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-5-5 5 5-5 5"/></svg></a>
+        </div>
+        <p class="local-note"><span class="local-mark" aria-hidden="true"></span>Runs locally. No account needed. Rehearse without an API key.</p>
+        <div class="hero-audience"><span>Built for</span><p>Builders. Forecast thinkers.<br>Solana hackathon teams.</p></div>
+      </div>
+
+      <div class="forecast-demo" aria-labelledby="forecast-title">
+        <div class="demo-header"><span class="demo-symbol" aria-hidden="true">P / Q</span><span class="demo-label">INTERACTIVE EXAMPLE</span><span class="sample-tag">Synthetic data</span></div>
+        <div class="demo-content">
+          <div class="scenario-options" role="group" aria-label="Choose an example question">
+            <button type="button" class="scenario-button selected" data-scenario="builder" aria-pressed="true">Product launch</button>
+            <button type="button" class="scenario-button" data-scenario="research" aria-pressed="false">Market research</button>
+            <button type="button" class="scenario-button" data-scenario="hackathon" aria-pressed="false">Hackathon</button>
+          </div>
+          <h2 id="forecast-title">Will the public demo ship before the sprint deadline?</h2>
+          <div class="forecast-numbers"><div><span class="forecast-side">YES</span><output id="yes-probability" for="probability">68<span>%</span></output></div><div class="opposite-probability"><span class="forecast-side">NO</span><output id="no-probability" for="probability">32<span>%</span></output></div></div>
+          <figure class="probability-figure">
+            <svg id="probability-chart" viewBox="0 0 480 154" role="img" aria-labelledby="chart-title chart-description">
+              <title id="chart-title">Illustrative probability history</title>
+              <desc id="chart-description">A synthetic forecast path ends at the probability you select. This is not live market data.</desc>
+              <defs><linearGradient id="chart-fill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="var(--signal)" stop-opacity=".18"/><stop offset="1" stop-color="var(--signal)" stop-opacity="0"/></linearGradient></defs>
+              <path class="chart-grid" d="M0 26h480M0 76h480M0 126h480M80 0v154M160 0v154M240 0v154M320 0v154M400 0v154"/>
+              <path id="forecast-area" class="chart-area" d="M0 91 48 89 96 99 144 80 192 84 240 66 288 76 336 65 384 60 432 59 480 59V154H0Z"/>
+              <path id="forecast-line" class="chart-line" d="M0 91 48 89 96 99 144 80 192 84 240 66 288 76 336 65 384 60 432 59 480 59"/>
+              <circle id="forecast-end" class="chart-end" cx="480" cy="59" r="4"/>
+            </svg>
+            <figcaption><span>Illustrative forecast history</span><span>Your estimate</span></figcaption>
+          </figure>
+          <div class="forecast-input">
+            <div class="slider-label"><label for="probability">What’s your probability?</label><span>Move the signal</span></div>
+            <input id="probability" type="range" min="1" max="99" step="1" value="68" aria-describedby="demo-disclaimer" style="--probability:68%">
+            <div class="range-labels" aria-hidden="true"><span>Unlikely</span><span>Even odds</span><span>Likely</span></div>
+          </div>
+          <div class="resolution-demo"><span>Try an outcome</span><div class="outcome-buttons" role="group" aria-label="Resolve the illustrative forecast"><button type="button" data-outcome="yes" aria-pressed="false">YES</button><button type="button" data-outcome="no" aria-pressed="false">NO</button><button type="button" data-outcome="void" aria-pressed="false">VOID</button></div></div>
+          <p id="forecast-result" class="forecast-result" role="status" aria-live="polite">Choose an outcome to see how your forecast scores.</p>
+        </div>
+        <p class="demo-disclaimer" id="demo-disclaimer">A small forecast sandbox. Illustrative probabilities, no live prices or trades. Nothing here is saved.</p>
+      </div>
+    </section>
+
+    <section class="product-facts page-width" aria-label="What is included">
+      <p><strong>8</strong><span>specialist roles</span></p>
+      <p><strong>8</strong><span>bundled role skills</span></p>
+      <p><strong>11</strong><span>files in a complete run</span></p>
+      <p class="fact-approval"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="m16 3 11 6v8c0 6-11 12-11 12S5 23 5 17V9L16 3Zm-5 13 4 4 7-8"/></svg><span><strong>Your approval.</strong><span>Before the build begins.</span></span></p>
+    </section>
+
+    <section class="workflow-section page-width" id="how-it-works" aria-labelledby="workflow-title">
+      <div class="section-intro"><h2 id="workflow-title">One question.<br>A clear path to a build.</h2><p>Keep the important decisions in your hands. The Studio makes the brief, the work, and its limits visible.</p></div>
+      <ol class="workflow">
+        <li><span class="step-number">01</span><h3>Give it a brief.</h3><p>Choose a starter and describe the question, audience, and resolution rule. An editable example gets you going.</p><span class="step-detail">Your idea, in plain language</span></li>
+        <li><span class="step-number">02</span><h3>Approve the direction.</h3><p>Review the chief’s build memo. Approval binds that exact brief and memo before the next roles start.</p><span class="step-detail">One deliberate decision</span></li>
+        <li><span class="step-number">03</span><h3>Follow the work.</h3><p>Inspect role outputs and the run log. Independent tasks can run in parallel, with up to three workers.</p><span class="step-detail">Files you can open and own</span></li>
+        <li><span class="step-number">04</span><h3>Try it. Take it.</h3><p>Preview the app, review the checks, and export a ZIP with source files and draft submission materials.</p><span class="step-detail">A useful, inspectable handoff</span></li>
+      </ol>
+    </section>
+
+    <section class="team-section page-width" aria-labelledby="team-title">
+      <div class="team-copy"><h2 id="team-title">A team with<br>defined jobs.</h2><p>Research, domain logic, interface, review. Each role has a bounded task, a local skill, and an output you can inspect.</p><a class="text-link" href="/skills">Explore all agents & skills <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-5-5 5 5-5 5"/></svg></a></div>
+      <div class="team-map" aria-label="Agent workflow: product, research and architect discover; chief prepares a memo for your approval; domain, frontend and submission build; reviewer reviews the outputs">
+        <div class="team-stage"><span class="stage-label">DISCOVER</span><div class="role-names"><span>Product</span><span>Research</span><span>Architect</span></div></div>
+        <div class="team-stage decision-stage"><span class="stage-label">ALIGN</span><div class="role-names"><span>Chief</span><span class="approval-node">Your approval</span></div></div>
+        <div class="team-stage"><span class="stage-label">BUILD</span><div class="role-names"><span>Domain</span><span>Frontend</span><span>Submission</span></div></div>
+        <div class="team-stage"><span class="stage-label">REVIEW</span><div class="role-names"><span>Reviewer</span></div></div>
+        <p class="team-caption">Role orchestration is built in. Live model execution requires your configured provider access.</p>
+      </div>
+    </section>
+
+    <section class="start-section page-width" id="start-local" aria-labelledby="start-title">
+      <div class="start-heading"><h2 id="start-title">Your machine.<br>Your starting point.</h2><p>Download the local starter, extract its folder, then run this command in your terminal.</p><a class="text-link" href="/download/source.zip" download>Download local starter <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v12m-5-5 5 5 5-5M5 19h14"/></svg></a><p class="source-note">Local development preview · source ZIP</p></div>
+      <div class="start-content">
+        <div class="command-block"><div class="command-title"><span>Start the local Studio</span><button type="button" id="copy-command" aria-label="Copy local start command">Copy command</button></div><pre><code id="start-command">python3 predictkit.py serve --open</code></pre><p id="copy-status" role="status" aria-live="polite">Opens this local experience in your browser.</p></div>
+        <div class="mode-options"><div><h3>Explore in rehearsal.</h3><p>No key needed. Scripted role outputs let you try the full workflow, including the approval and app preview.</p></div><div><h3>Bring a live model.</h3><p>Configure an OpenAI Responses API key, model, and budget locally to use model-generated role outputs.</p></div></div>
+        <a class="button primary" href="/studio">Enter your local Studio <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></a>
+      </div>
+    </section>
+
+    <section class="details-section page-width" aria-labelledby="details-title">
+      <div class="details-intro"><h2 id="details-title">Know what<br>you’re building on.</h2><p>Source you can inspect. Boundaries you can see.</p><a class="text-link" href="/readiness">Open the evidence desk <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-5-5 5 5-5 5"/></svg></a></div>
+      <div class="faq">
+        <details open><summary>Is this a prediction exchange?<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>PredictKit builds prediction applications. Its reference apps support forecasts, YES / NO / VOID outcomes, and calibration. They are off-chain simulations; there is no real-money trading or custody.</p></details>
+        <details><summary>What is connected to Solana today?<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>The registry now compiles to Solana bytecode and passes 28 tests in a local SVM. An executed local demo creates a question, records forecasts and resolves it. Wallet connection and public deployment remain open; the reference apps remain off-chain. <a href="/solana-demo">Inspect the recorded local execution</a>.</p></details>
+        <details><summary>Can I use Codex or Claude?<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>You can use either coding tool to work on this local repository. They are not connected as native Studio runtime workers. The implemented live runtime provider uses OpenAI’s Responses API.</p></details>
+        <details><summary>What happens when I export?<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>You receive a local ZIP with generated artifacts and the run record. Pitch and technical demo files are drafts to review. Export does not publish an app, create a public repository, or submit to an event.</p></details>
+      </div>
+    </section>
+
+    <section class="closing page-width" aria-labelledby="closing-title"><div><h2 id="closing-title">What will you<br>put a probability on?</h2><p>Start with the question. Build something you can explain.</p></div><a class="button primary" href="/studio">Open Studio <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></a></section>
+  </main>
+
+  <footer class="site-footer page-width"><a class="wordmark" href="/" aria-label="PredictKit home"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M14 3 3 16l13 13 13-13-8-8M12 16l4 4 12-13"/></svg><span>predictkit<span class="brand-slash">/</span></span></a><p>Local files. Visible decisions.</p><span>v0.2 · Local source</span></footer>
+  <noscript><p class="noscript">JavaScript enables the forecast sandbox, theme selector, and copy button. You can still read this page. The Studio requires JavaScript.</p></noscript>
+</body>
+</html>

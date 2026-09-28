@@ -1,0 +1,14 @@
+{
+  "project_name": "LaunchLens",
+  "user": "Small product teams preparing a public launch",
+  "problem": "The official launch date hides uncertainty that individual team members can see.",
+  "industry": "Software teams and project delivery",
+  "alternative": "Status meetings, spreadsheets and informal messages",
+  "why_prediction": "Collect explicit forecasts and compare them with later outcomes instead of a vague green status.",
+  "why_solana": "Future shared forecast registry for independently verifiable timestamps and outcomes; not implemented in this prototype.",
+  "difference": "A resolution-first launch forecast with a visible audit trail, rather than another public betting exchange.",
+  "market_question": "Will our team publish the public demo by 18:00 UTC on 8 October 2026?",
+  "resolution_rule": "YES only if the named release page shows a usable public demo published on or before the stated deadline. The production version must verify an archived source and its timestamp.",
+  "void_policy": "VOID if the release page cannot be verified, the scope changes, or the evidence conflicts. No financial settlement.",
+  "template": "forecast-studio"
+}

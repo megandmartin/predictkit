@@ -1,0 +1,19 @@
+[toolchain]
+anchor_version = "1.2.0"
+
+[features]
+resolution = true
+skip-lint = false
+
+[programs.localnet]
+predictkit_registry = "8xG2yBTiVUPJRmHUW5JdsYUaBMoqboNoRBVSXL1nAjZT"
+
+[programs.devnet]
+predictkit_registry = "8xG2yBTiVUPJRmHUW5JdsYUaBMoqboNoRBVSXL1nAjZT"
+
+[provider]
+cluster = "Localnet"
+wallet = ".local/dev-wallet.json"
+
+# Not a deployment. Run anchor build, anchor keys sync, then anchor build.
+# Keep this file on Localnet until the explicit devnet release checklist passes.

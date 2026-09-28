@@ -1,0 +1,21 @@
+{
+  "name": "@predictkit/registry-client",
+  "private": true,
+  "version": "0.2.0",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@solana/web3.js": "1.98.4"
+  },
+  "scripts": {
+    "test:codec": "node --test ../tests/codec.test.mjs",
+    "test:client": "node --test ../tests/client.test.mjs",
+    "test:svm": "node --test ../tests/svm.test.mjs",
+    "demo:svm": "node ../scripts/run-local-demo.mjs"
+  },
+  "devDependencies": {
+    "litesvm": "1.5.0"
+  }
+}

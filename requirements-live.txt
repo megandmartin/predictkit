@@ -1,0 +1,2 @@
+# PredictKit v0.2 uses Python standard-library HTTPS. No pip installation needed.
+# The unverified v0.1 SDK adapter was removed; see docs/DECISIONS_V0_2.md.

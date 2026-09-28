@@ -1,0 +1,12 @@
+.git
+.local
+.env
+.env.*
+*.keypair.json
+**/__pycache__
+**/node_modules
+solana/.tools
+solana/target
+solana/.anchor
+output
+dist

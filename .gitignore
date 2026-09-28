@@ -1,0 +1,23 @@
+.local/
+.env
+.env.*
+!.env.example
+__pycache__/
+*.pyc
+.venv/
+node_modules/
+solana/target/
+solana/.anchor/
+*.keypair.json
+.DS_Store
+
+# Hosted build and machine-local tooling
+dist/
+.vercel/
+output/
+solana/.tools/
+.vercel
+.env*
+
+# Keep only the empty, documented example.
+!.env.example

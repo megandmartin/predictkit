@@ -1,0 +1,134 @@
+{
+  "kind": "compiled-program-local-demo",
+  "environment": "isolated-local-svm",
+  "public_network": false,
+  "wallet_files_read": false,
+  "uses_synthetic_test_keys": true,
+  "program": "8xG2yBTiVUPJRmHUW5JdsYUaBMoqboNoRBVSXL1nAjZT",
+  "program_sha256": "218c05107cce14107db43f232ba92cf9142084bbbd23be606d5aeffd2421efec",
+  "program_path": "solana/target/sbpfv3-solana-solana/release/predictkit_registry.so",
+  "question_account": "FtioG9pt7PRhMbvPNxBB7cM5mwu2jNLwmLepCriPV4AH",
+  "question": "Will the reviewed launch milestone be reached?",
+  "forecasts": [
+    {
+      "probability_bps": 6800,
+      "account": "FENSAmcV7brXGQzf3vgmzeaR4cYJC7oYFPqaZcDbhbnA"
+    },
+    {
+      "probability_bps": 4200,
+      "account": "GGb1XSLGQoFmW4cRf8L2HYZVuyP5mAdRg25Y1a1iRVfo"
+    }
+  ],
+  "after_forecasts": {
+    "authority": "61H5Y4gnRFDC6ALPxmdqXdEwuWedRxvXEQA3T5whbJw9",
+    "resolver": "HRrHfT6HoCSoozABnkDGo2zMVzoFwEbif2kkGLKCogG2",
+    "id": "0101010101010101010101010101010101010101010101010101010101010101",
+    "question": "Will the reviewed launch milestone be reached?",
+    "rulesHash": "0505050505050505050505050505050505050505050505050505050505050505",
+    "closesAt": "110",
+    "resolvesAfter": "120",
+    "outcome": "OPEN",
+    "resolvedAt": "0",
+    "evidenceHash": "0000000000000000000000000000000000000000000000000000000000000000",
+    "forecastCount": "2",
+    "bump": 255
+  },
+  "final_account": {
+    "authority": "61H5Y4gnRFDC6ALPxmdqXdEwuWedRxvXEQA3T5whbJw9",
+    "resolver": "HRrHfT6HoCSoozABnkDGo2zMVzoFwEbif2kkGLKCogG2",
+    "id": "0101010101010101010101010101010101010101010101010101010101010101",
+    "question": "Will the reviewed launch milestone be reached?",
+    "rulesHash": "0505050505050505050505050505050505050505050505050505050505050505",
+    "closesAt": "110",
+    "resolvesAfter": "120",
+    "outcome": "YES",
+    "resolvedAt": "120",
+    "evidenceHash": "0707070707070707070707070707070707070707070707070707070707070707",
+    "forecastCount": "2",
+    "bump": 255
+  },
+  "transactions": [
+    {
+      "instruction": "create_question",
+      "environment": "isolated-local-svm",
+      "success": true,
+      "signature": "4UYmS4rroiAVoj3nweC1gpiYomJqagFqyLATwehC7wFR2KbaddHx3ufcvQTPYm5hnAe9MbKrxbqNpukuxDgeobyk",
+      "computeUnits": "7546",
+      "logs": [
+        "Program 8xG2yBTiVUPJRmHUW5JdsYUaBMoqboNoRBVSXL1nAjZT invoke [1]",
+        "Program log: Instruction: CreateQuestion",
+        "Program 11111111111111111111111111111111 invoke [2]",
+        "Program 11111111111111111111111111111111 success",
+        "Program 8xG2yBTiVUPJRmHUW5JdsYUaBMoqboNoRBVSXL1nAjZT consumed 7546 of 200000 compute units",
+        "Program 8xG2yBTiVUPJRmHUW5JdsYUaBMoqboNoRBVSXL1nAjZT success"
+      ]
+    },
+    {
+      "instruction": "submit_forecast",
+      "environment": "isolated-local-svm",
+      "success": true,
+      "signature": "3LrHWu4axag9F3o6V481zcKZjW4b7H8aXLLaW8wBG9p4rbNgyqTTK5xnGnwntWCFLCuCDA3ZQRjTCPUwFD1Hi9Lt",
+      "computeUnits": "11714",
+      "logs": [
+        "Program 8xG2yBTiVUPJRmHUW5JdsYUaBMoqboNoRBVSXL1nAjZT invoke [1]",
+        "Program log: Instruction: SubmitForecast",
+        "Program 11111111111111111111111111111111 invoke [2]",
+        "Program 11111111111111111111111111111111 success",
+        "Program 8xG2yBTiVUPJRmHUW5JdsYUaBMoqboNoRBVSXL1nAjZT consumed 11714 of 200000 compute units",
+        "Program 8xG2yBTiVUPJRmHUW5JdsYUaBMoqboNoRBVSXL1nAjZT success"
+      ]
+    },
+    {
+      "instruction": "submit_forecast",
+      "environment": "isolated-local-svm",
+      "success": true,
+      "signature": "25LBaSrMRcWnZpiv8ALRt57F5PP5FAdNvsp5DBDcMzDtYRjQUmYPCLWfBFVFMTpoq8HhXS612VgoA3QSjcu8x8N2",
+      "computeUnits": "10214",
+      "logs": [
+        "Program 8xG2yBTiVUPJRmHUW5JdsYUaBMoqboNoRBVSXL1nAjZT invoke [1]",
+        "Program log: Instruction: SubmitForecast",
+        "Program 11111111111111111111111111111111 invoke [2]",
+        "Program 11111111111111111111111111111111 success",
+        "Program 8xG2yBTiVUPJRmHUW5JdsYUaBMoqboNoRBVSXL1nAjZT consumed 10214 of 200000 compute units",
+        "Program 8xG2yBTiVUPJRmHUW5JdsYUaBMoqboNoRBVSXL1nAjZT success"
+      ]
+    },
+    {
+      "instruction": "submit_forecast",
+      "environment": "isolated-local-svm",
+      "success": false,
+      "signature": "5dTNGDvceyR1WLejJhRE59LDkUZHMC9F1SuWr4NDgGs91up4wfMz8CBXvW1qiqgq7hGRLUHqDFWAoeUZpakN6zdY",
+      "computeUnits": "11083",
+      "logs": [
+        "Program 8xG2yBTiVUPJRmHUW5JdsYUaBMoqboNoRBVSXL1nAjZT invoke [1]",
+        "Program log: Instruction: SubmitForecast",
+        "Program 11111111111111111111111111111111 invoke [2]",
+        "Program 11111111111111111111111111111111 success",
+        "Program log: AnchorError thrown in programs/predictkit_registry/src/lib.rs:39. Error Code: ForecastClosed. Error Number: 6004. Error Message: Forecasting has closed.",
+        "Program 8xG2yBTiVUPJRmHUW5JdsYUaBMoqboNoRBVSXL1nAjZT consumed 11083 of 200000 compute units",
+        "Program 8xG2yBTiVUPJRmHUW5JdsYUaBMoqboNoRBVSXL1nAjZT failed: custom program error: 0x1774"
+      ]
+    },
+    {
+      "instruction": "resolve_question",
+      "environment": "isolated-local-svm",
+      "success": true,
+      "signature": "ufAnKETfghgxnjUQpqJ88gW28a57XWdwDSUrWmC2gW7bYcSYiRqX8tcMLpvtK5zBveUAy5vXmd8oBqm3tkgzDLP",
+      "computeUnits": "4587",
+      "logs": [
+        "Program 8xG2yBTiVUPJRmHUW5JdsYUaBMoqboNoRBVSXL1nAjZT invoke [1]",
+        "Program log: Instruction: ResolveQuestion",
+        "Program 8xG2yBTiVUPJRmHUW5JdsYUaBMoqboNoRBVSXL1nAjZT consumed 4587 of 200000 compute units",
+        "Program 8xG2yBTiVUPJRmHUW5JdsYUaBMoqboNoRBVSXL1nAjZT success"
+      ]
+    }
+  ],
+  "boundary": "These signatures and balances exist only in this in-process LiteSVM test. There is no devnet/mainnet deployment, RPC or persistent wallet. The placeholder program ID is only the local test identity.",
+  "publication": {
+    "original_sha256": "826089699835947bef2e3677ca509c191da28a8f9613e2b48fd4950162000386",
+    "redactions": [
+      "program_path: replaced private absolute build path with repository-relative path"
+    ],
+    "boundary": "Public derivative of a recorded local SVM receipt. Transaction and account values are unchanged; this JSON has its own hash."
+  }
+}

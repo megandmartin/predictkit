@@ -1,0 +1,441 @@
+{
+  "address": "\"8xG2yBTiVUPJRmHUW5JdsYUaBMoqboNoRBVSXL1nAjZT\"",
+  "errors": [
+    {
+      "code": 6000,
+      "name": "InvalidQuestion",
+      "msg": "Question must be nonempty and at most 200 UTF-8 bytes"
+    },
+    {
+      "code": 6001,
+      "name": "InvalidHash",
+      "msg": "Hash must not be zero"
+    },
+    {
+      "code": 6002,
+      "name": "InvalidSchedule",
+      "msg": "Close must be future; resolve time must not precede close"
+    },
+    {
+      "code": 6003,
+      "name": "InvalidResolver",
+      "msg": "Resolver cannot be the system/default public key"
+    },
+    {
+      "code": 6004,
+      "name": "ForecastClosed",
+      "msg": "Forecasting has closed"
+    },
+    {
+      "code": 6005,
+      "name": "InvalidProbability",
+      "msg": "Probability must be 0 to 10000 basis points"
+    },
+    {
+      "code": 6006,
+      "name": "AlreadyResolved",
+      "msg": "Resolution is immutable"
+    },
+    {
+      "code": 6007,
+      "name": "TooEarly",
+      "msg": "Resolution is too early"
+    },
+    {
+      "code": 6008,
+      "name": "InvalidOutcome",
+      "msg": "Outcome must be YES, NO or VOID"
+    },
+    {
+      "code": 6009,
+      "name": "Overflow",
+      "msg": "Counter overflow"
+    }
+  ],
+  "program": {
+    "address": "",
+    "metadata": {
+      "name": "predictkit_registry",
+      "version": "0.2.0",
+      "spec": "0.1.0"
+    },
+    "instructions": [
+      {
+        "name": "create_question",
+        "discriminator": [
+          222,
+          74,
+          49,
+          30,
+          160,
+          220,
+          179,
+          27
+        ],
+        "accounts": [
+          {
+            "name": "authority",
+            "writable": true,
+            "signer": true
+          },
+          {
+            "name": "question_account",
+            "writable": true,
+            "pda": {
+              "seeds": [
+                {
+                  "kind": "const",
+                  "value": [
+                    113,
+                    117,
+                    101,
+                    115,
+                    116,
+                    105,
+                    111,
+                    110
+                  ]
+                },
+                {
+                  "kind": "account",
+                  "path": "authority"
+                },
+                {
+                  "kind": "arg",
+                  "path": "id"
+                }
+              ]
+            }
+          },
+          {
+            "name": "system_program",
+            "address": "11111111111111111111111111111111"
+          }
+        ],
+        "args": [
+          {
+            "name": "id",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "question",
+            "type": "string"
+          },
+          {
+            "name": "rules_hash",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "closes_at",
+            "type": "i64"
+          },
+          {
+            "name": "resolves_after",
+            "type": "i64"
+          },
+          {
+            "name": "resolver",
+            "type": "pubkey"
+          }
+        ]
+      },
+      {
+        "name": "submit_forecast",
+        "discriminator": [
+          198,
+          148,
+          116,
+          0,
+          89,
+          239,
+          189,
+          90
+        ],
+        "accounts": [
+          {
+            "name": "forecaster",
+            "writable": true,
+            "signer": true
+          },
+          {
+            "name": "question_account",
+            "writable": true,
+            "pda": {
+              "seeds": [
+                {
+                  "kind": "const",
+                  "value": [
+                    113,
+                    117,
+                    101,
+                    115,
+                    116,
+                    105,
+                    111,
+                    110
+                  ]
+                },
+                {
+                  "kind": "account",
+                  "path": "question_account.authority",
+                  "account": "Question"
+                },
+                {
+                  "kind": "account",
+                  "path": "question_account.id",
+                  "account": "Question"
+                }
+              ]
+            }
+          },
+          {
+            "name": "forecast",
+            "writable": true,
+            "pda": {
+              "seeds": [
+                {
+                  "kind": "const",
+                  "value": [
+                    102,
+                    111,
+                    114,
+                    101,
+                    99,
+                    97,
+                    115,
+                    116
+                  ]
+                },
+                {
+                  "kind": "account",
+                  "path": "question_account"
+                },
+                {
+                  "kind": "account",
+                  "path": "forecaster"
+                }
+              ]
+            }
+          },
+          {
+            "name": "system_program",
+            "address": "11111111111111111111111111111111"
+          }
+        ],
+        "args": [
+          {
+            "name": "probability_bps",
+            "type": "u16"
+          }
+        ]
+      },
+      {
+        "name": "resolve_question",
+        "discriminator": [
+          52,
+          32,
+          224,
+          179,
+          180,
+          8,
+          0,
+          246
+        ],
+        "accounts": [
+          {
+            "name": "resolver",
+            "signer": true,
+            "relations": [
+              "question_account"
+            ]
+          },
+          {
+            "name": "question_account",
+            "writable": true,
+            "pda": {
+              "seeds": [
+                {
+                  "kind": "const",
+                  "value": [
+                    113,
+                    117,
+                    101,
+                    115,
+                    116,
+                    105,
+                    111,
+                    110
+                  ]
+                },
+                {
+                  "kind": "account",
+                  "path": "question_account.authority",
+                  "account": "Question"
+                },
+                {
+                  "kind": "account",
+                  "path": "question_account.id",
+                  "account": "Question"
+                }
+              ]
+            }
+          }
+        ],
+        "args": [
+          {
+            "name": "outcome",
+            "type": "u8"
+          },
+          {
+            "name": "evidence_hash",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "accounts": [
+      {
+        "name": "predictkit_registry::Forecast",
+        "discriminator": [
+          249,
+          253,
+          125,
+          195,
+          175,
+          165,
+          123,
+          36
+        ]
+      },
+      {
+        "name": "predictkit_registry::Question",
+        "discriminator": [
+          111,
+          22,
+          150,
+          220,
+          181,
+          122,
+          118,
+          127
+        ]
+      }
+    ],
+    "types": [
+      {
+        "name": "predictkit_registry::Forecast",
+        "type": {
+          "kind": "struct",
+          "fields": [
+            {
+              "name": "question",
+              "type": "pubkey"
+            },
+            {
+              "name": "forecaster",
+              "type": "pubkey"
+            },
+            {
+              "name": "probability_bps",
+              "type": "u16"
+            },
+            {
+              "name": "created_at",
+              "type": "i64"
+            },
+            {
+              "name": "bump",
+              "type": "u8"
+            }
+          ]
+        }
+      },
+      {
+        "name": "predictkit_registry::Question",
+        "type": {
+          "kind": "struct",
+          "fields": [
+            {
+              "name": "authority",
+              "type": "pubkey"
+            },
+            {
+              "name": "resolver",
+              "type": "pubkey"
+            },
+            {
+              "name": "id",
+              "type": {
+                "array": [
+                  "u8",
+                  32
+                ]
+              }
+            },
+            {
+              "name": "question",
+              "type": "string"
+            },
+            {
+              "name": "rules_hash",
+              "type": {
+                "array": [
+                  "u8",
+                  32
+                ]
+              }
+            },
+            {
+              "name": "closes_at",
+              "type": "i64"
+            },
+            {
+              "name": "resolves_after",
+              "type": "i64"
+            },
+            {
+              "name": "outcome",
+              "type": "u8"
+            },
+            {
+              "name": "resolved_at",
+              "type": "i64"
+            },
+            {
+              "name": "evidence_hash",
+              "type": {
+                "array": [
+                  "u8",
+                  32
+                ]
+              }
+            },
+            {
+              "name": "forecast_count",
+              "type": "u64"
+            },
+            {
+              "name": "bump",
+              "type": "u8"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
