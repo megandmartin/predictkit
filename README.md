@@ -2,6 +2,14 @@
 
 **One brief. Eight visible roles. A prediction prototype you can inspect.**
 
+<p>
+  <a href="https://predictkit-j12zey1eu-megandmartins-projects.vercel.app"><strong>Try the hosted preview</strong></a> ·
+  <a href="#run-locally">Run locally</a> ·
+  <a href="docs/HOW_PREDICTKIT_WORKS.md">How it works</a>
+</p>
+
+<a href="https://predictkit-j12zey1eu-megandmartins-projects.vercel.app"><img src="assets/readme-hero.webp" alt="The PredictKit hosted preview: Turn a question into a working app, next to an interactive prediction example on synthetic data." width="100%"></a>
+
 An MIT-licensed local builder studio with a Solana-inspired interface, explicit approval gates, role-scoped skills and inspectable evidence. Start free with scripted rehearsal; configure an API model only when you choose to.
 
 ## Run locally
